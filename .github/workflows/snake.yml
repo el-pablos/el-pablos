@@ -1,13 +1,13 @@
 name: Generate Snake Contribution Animation
 
 on:
-  # Run automatically every 24 hours
+  # Run automatically every 24 hours at midnight UTC
   schedule:
-    - cron: "0 */24 * * *"
-  
+    - cron: "0 0 * * *"
+
   # Allow manual trigger
   workflow_dispatch:
-  
+
   # Run on every push to main branch
   push:
     branches:
@@ -18,8 +18,8 @@ jobs:
     permissions:
       contents: write
     runs-on: ubuntu-latest
-    timeout-minutes: 5
-    
+    timeout-minutes: 10
+
     steps:
       # Generate the snake animation from GitHub contribution graph
       - name: Generate github-contribution-grid-snake.svg
@@ -29,8 +29,7 @@ jobs:
           outputs: |
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
-            dist/github-contribution-grid-snake.svg?palette=github-light
-      
+
       # Push the generated files to the output branch
       - name: Push github-contribution-grid-snake.svg to output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0

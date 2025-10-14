@@ -10,7 +10,7 @@
 
   <!-- Dynamic Typing Animation with Intimidating Taglines -->
   <p align="center">
-    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=700&size=24&duration=3500&pause=1000&color=9F7AEA&center=true&vCenter=true&width=600&lines=Code+isn't+just+a+job%2C+it's+an+empire.;I+don't+fix+bugs%2C+I+create+features.;They+call+it+legacy+code%2C+I+call+it+art.;Building+digital+empires%2C+one+commit+at+a+time." alt="Typing SVG"/>
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=24&duration=3500&pause=1000&color=9F7AEA&center=true&vCenter=true&width=600&lines=Code+isn't+just+a+job%2C+it's+an+empire.;I+don't+fix+bugs%2C+I+create+features.;They+call+it+legacy+code%2C+I+call+it+art.;Building+digital+empires%2C+one+commit+at+a+time." alt="Typing SVG"/>
   </p>
 </div>
 
@@ -76,9 +76,9 @@
 <div id="snake-game" align="center">
   <h2>🐍 𝕮𝖔𝖓𝖙𝖗𝖎𝖇𝖚𝖙𝖎𝖔𝖓 𝕾𝖓𝖆𝖐𝖊 🐍</h2>
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/el-pablos/el-pablos/blob/output/github-contribution-grid-snake-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://github.com/el-pablos/el-pablos/blob/output/github-contribution-grid-snake.svg">
-    <img alt="GitHub Contribution Snake" src="https://github.com/el-pablos/el-pablos/blob/output/github-contribution-grid-snake.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/el-pablos/el-pablos/output/github-contribution-grid-snake-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/el-pablos/el-pablos/output/github-contribution-grid-snake.svg">
+    <img alt="GitHub Contribution Snake" src="https://raw.githubusercontent.com/el-pablos/el-pablos/output/github-contribution-grid-snake.svg">
   </picture>
 </div>
 
