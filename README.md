@@ -78,6 +78,17 @@
 
 <br>
 
+<!-- Live Website Preview Section -->
+<div id="live-stream" align="center">
+  <h2>🔴 𝕷𝖎𝖛𝖊 𝕻𝖗𝖊𝖛𝖎𝖊𝖜: tams.codes 🔴</h2>
+  <a href="https://tams.codes/" target="_blank">
+    <img src="https://raw.githubusercontent.com/el-pablos/el-pablos/main/profile-assets/website-stream.png" alt="Live Preview of tams.codes" width="100%">
+  </a>
+  <p><i>⚡ Tampilan ini diperbarui otomatis setiap 6 jam via GitHub Actions ⚡</i></p>
+</div>
+
+<br>
+
 <!-- Footer with Additional Flair -->
 <div align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:4b0082,100:8a2be2&height=120&section=footer" width="100%" alt="Footer"/>

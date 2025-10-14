@@ -1,0 +1,32 @@
+name: Website Live Stream
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'  # Runs every 6 hours
+  workflow_dispatch:  # Allows manual trigger
+
+jobs:
+  update-website-preview:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      - name: Take Website Screenshot
+        uses: SjoerdHekking/website-screenshot-action@v1.1
+        with:
+          url: https://tams.codes/
+          output_file: profile-assets/website-stream.png
+          width: 1280
+          height: 720
+
+      - name: Commit and Push new screenshot
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: 'CI: Update website live stream preview'
+          file_pattern: 'profile-assets/website-stream.png'
+          commit_user_name: 'GitHub Actions Bot'
+          commit_user_email: 'actions@github.com'
+          commit_author: 'GitHub Actions Bot <actions@github.com>'
+
