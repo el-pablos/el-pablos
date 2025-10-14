@@ -158,26 +158,6 @@ const pablo = {
 <br>
 
 <!-- ═══════════════════════════════════════════════════════════════════════════════ -->
-<!-- LIVE WEBSITE PREVIEW -->
-<!-- ═══════════════════════════════════════════════════════════════════════════════ -->
-
-<div align="center">
-
-### 🔴 **Live Preview: tams.codes** 🔴
-
-<a href="https://tams.codes/" target="_blank">
-<img src="https://raw.githubusercontent.com/el-pablos/el-pablos/main/profile-assets/website-stream.png" alt="Live Preview of tams.codes" width="100%" style="border-radius: 10px; box-shadow: 0 4px 6px rgba(138, 43, 226, 0.3);"/>
-</a>
-
-<br>
-
-<sub>⚡ Auto-updated every 6 hours via GitHub Actions | Last sync: <img src="https://img.shields.io/github/last-commit/el-pablos/el-pablos?label=&style=flat-square&color=8a2be2" alt="Last Update"/> ⚡</sub>
-
-</div>
-
-<br>
-
-<!-- ═══════════════════════════════════════════════════════════════════════════════ -->
 <!-- RANDOM DEV QUOTE -->
 <!-- ═══════════════════════════════════════════════════════════════════════════════ -->
 
