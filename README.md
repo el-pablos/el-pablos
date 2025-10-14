@@ -33,15 +33,9 @@
       <div id="connect" align="center">
         <h2>🔗 𝕮𝖔𝖓𝖓𝖊𝖈𝖙 🔗</h2>
         <p>
-            <a href="https://linkedin.com/in/el-pablos" target="_blank">
-              <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
-            </a>
-            <a href="https://twitter.com/el_pablos" target="_blank">
-              <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter">
-            </a>
-             <a href="mailto:contact@el-pablos.dev">
-              <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email">
-            </a>
+          <a href="https://linkedin.com/in/el-pablos" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
+          <a href="https://twitter.com/el_pablos" target="_blank"><img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter"></a>
+          <a href="mailto:contact@el-pablos.dev"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>
         </p>
       </div>
     </td>
