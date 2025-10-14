@@ -8,21 +8,43 @@ on:
 jobs:
   update-website-preview:
     runs-on: ubuntu-latest
-    
+
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Take Website Screenshot
-        uses: SjoerdHekking/website-screenshot-action@v1.1
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          url: https://tams.codes/
-          output_file: profile-assets/website-stream.png
-          width: 1280
-          height: 720
+          node-version: '20'
 
-      - name: Commit and Push new screenshot
-        uses: stefanzweifel/git-auto-commit-action@v4
+      - name: Install dependencies
+        run: |
+          npm install -g puppeteer
+          sudo apt-get update
+          sudo apt-get install -y chromium-browser
+
+      - name: Take website screenshot
+        run: |
+          node -e "
+          const puppeteer = require('puppeteer');
+          (async () => {
+            const browser = await puppeteer.launch({
+              headless: 'new',
+              executablePath: '/usr/bin/chromium-browser',
+              args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage']
+            });
+            const page = await browser.newPage();
+            await page.setViewport({ width: 1280, height: 720 });
+            await page.goto('https://tams.codes/', { waitUntil: 'networkidle2', timeout: 60000 });
+            await page.screenshot({ path: 'profile-assets/website-stream.png', fullPage: false });
+            await browser.close();
+            console.log('Screenshot captured successfully!');
+          })();
+          "
+
+      - name: Commit and push screenshot
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: 'CI: Update website live stream preview'
           file_pattern: 'profile-assets/website-stream.png'
