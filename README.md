@@ -258,29 +258,52 @@ const tama = {
 
 ### 📊 GitHub Analytics
 
-<p>
-<img width="49%" src="https://raw.githubusercontent.com/el-pablos/el-pablos/main/profile-summary-card-output/tokyonight/0-profile-details.svg" alt="Profile Details" />
+<!-- Row 1: Profile Overview + Streak -->
+<table>
+<tr>
+<td align="center" width="50%">
+<img src="https://raw.githubusercontent.com/el-pablos/el-pablos/main/profile-summary-card-output/tokyonight/0-profile-details.svg" width="100%" alt="Profile Details"/>
+</td>
+<td align="center" width="50%">
 <picture>
-<source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=el-pablos&hide_border=true&background=0d1117&ring=7c3aed&fire=a78bfa&currStreakLabel=8b5cf6&sideLabels=a78bfa&currStreakNum=c9d1d9&sideNums=c9d1d9&dates=6b7280" />
-<source media="(prefers-color-scheme: light)" srcset="https://streak-stats.demolab.com?user=el-pablos&hide_border=true&ring=7c3aed&fire=8b5cf6&currStreakLabel=7c3aed" />
-<img width="49%" src="https://streak-stats.demolab.com?user=el-pablos&hide_border=true&background=0d1117&ring=7c3aed&fire=a78bfa&currStreakLabel=8b5cf6&sideLabels=a78bfa&currStreakNum=c9d1d9&sideNums=c9d1d9&dates=6b7280" alt="GitHub Streak" />
+<source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=el-pablos&hide_border=true&background=0d1117&ring=7c3aed&fire=a78bfa&currStreakLabel=8b5cf6&sideLabels=a78bfa&currStreakNum=c9d1d9&sideNums=c9d1d9&dates=6b7280"/>
+<source media="(prefers-color-scheme: light)" srcset="https://streak-stats.demolab.com?user=el-pablos&hide_border=true&ring=7c3aed&fire=8b5cf6&currStreakLabel=7c3aed"/>
+<img src="https://streak-stats.demolab.com?user=el-pablos&hide_border=true&background=0d1117&ring=7c3aed&fire=a78bfa&currStreakLabel=8b5cf6&sideLabels=a78bfa&currStreakNum=c9d1d9&sideNums=c9d1d9&dates=6b7280" width="100%" alt="GitHub Streak"/>
 </picture>
-</p>
+</td>
+</tr>
+</table>
 
-<p>
-<img width="32%" src="https://raw.githubusercontent.com/el-pablos/el-pablos/main/profile-summary-card-output/tokyonight/1-repos-per-language.svg" alt="Repos per Language" />
-<img width="32%" src="https://raw.githubusercontent.com/el-pablos/el-pablos/main/profile-summary-card-output/tokyonight/2-most-commit-language.svg" alt="Most Commit Language" />
-<img width="32%" src="https://raw.githubusercontent.com/el-pablos/el-pablos/main/profile-summary-card-output/tokyonight/3-stats.svg" alt="Stats" />
-</p>
+<!-- Row 2: Language Stats -->
+<table>
+<tr>
+<td align="center" width="33%">
+<img src="https://raw.githubusercontent.com/el-pablos/el-pablos/main/profile-summary-card-output/tokyonight/1-repos-per-language.svg" width="100%" alt="Repos per Language"/>
+</td>
+<td align="center" width="33%">
+<img src="https://raw.githubusercontent.com/el-pablos/el-pablos/main/profile-summary-card-output/tokyonight/2-most-commit-language.svg" width="100%" alt="Most Commit Language"/>
+</td>
+<td align="center" width="33%">
+<img src="https://raw.githubusercontent.com/el-pablos/el-pablos/main/profile-summary-card-output/tokyonight/3-stats.svg" width="100%" alt="Stats"/>
+</td>
+</tr>
+</table>
 
-<p>
-<img width="49%" src="https://raw.githubusercontent.com/el-pablos/el-pablos/main/profile-summary-card-output/tokyonight/4-productive-time.svg" alt="Productive Time" />
+<!-- Row 3: Activity -->
+<table>
+<tr>
+<td align="center" width="50%">
+<img src="https://raw.githubusercontent.com/el-pablos/el-pablos/main/profile-summary-card-output/tokyonight/4-productive-time.svg" width="100%" alt="Productive Time"/>
+</td>
+<td align="center" width="50%">
 <picture>
-<source media="(prefers-color-scheme: dark)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=el-pablos&hide_border=true&bg_color=0d1117&color=a78bfa&line=7c3aed&point=c9d1d9&area=true&area_color=8b5cf6" />
-<source media="(prefers-color-scheme: light)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=el-pablos&hide_border=true&color=7c3aed&line=7c3aed&point=374151&area=true&area_color=8b5cf6" />
-<img width="49%" src="https://github-readme-activity-graph.vercel.app/graph?username=el-pablos&hide_border=true&bg_color=0d1117&color=a78bfa&line=7c3aed&point=c9d1d9&area=true&area_color=8b5cf6" alt="Activity Graph" />
+<source media="(prefers-color-scheme: dark)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=el-pablos&hide_border=true&bg_color=0d1117&color=a78bfa&line=7c3aed&point=c9d1d9&area=true&area_color=8b5cf6"/>
+<source media="(prefers-color-scheme: light)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=el-pablos&hide_border=true&color=7c3aed&line=7c3aed&point=374151&area=true&area_color=8b5cf6"/>
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=el-pablos&hide_border=true&bg_color=0d1117&color=a78bfa&line=7c3aed&point=c9d1d9&area=true&area_color=8b5cf6" width="100%" alt="Activity Graph"/>
 </picture>
-</p>
+</td>
+</tr>
+</table>
 
 </div>
 
