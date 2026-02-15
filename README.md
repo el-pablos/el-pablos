@@ -54,7 +54,7 @@ const tama = {
 <br><br>
 
 <a href="https://porto.tams.codes" target="_blank"><img src="https://img.shields.io/badge/🌐_porto.tams.codes-8a2be2?style=for-the-badge" alt="Portfolio"/></a>
-<a href="mailto:yeteprem.end23juni@gmail.com"><img src="https://img.shields.io/badge/📧_Email_Me-D14836?style=for-the-badge" alt="Email"/></a>
+<a href="mailto:me@tams.codes"><img src="https://img.shields.io/badge/📧_me@tams.codes-8a2be2?style=for-the-badge" alt="Email"/></a>
 
 </td>
 </tr>
@@ -95,6 +95,24 @@ const tama = {
 </td>
 </tr>
 </table>
+
+</div>
+
+<br>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════════ -->
+<!-- CYBER THREAT MAP -->
+<!-- ═══════════════════════════════════════════════════════════════════════════════ -->
+
+<div align="center">
+
+### 🌐 Global Threat Intelligence
+
+<br>
+
+<a href="https://github.com/el-pablos"><img src="https://raw.githubusercontent.com/el-pablos/el-pablos/main/profile-assets/cybermap.svg" width="100%" alt="Cyber Threat Map — Live Global Intelligence Monitor"/></a>
+
+<sub>⚡ Real-time threat visualization from the command center — Jakarta, Indonesia</sub>
 
 </div>
 
@@ -241,11 +259,7 @@ const tama = {
 ### 📊 GitHub Analytics
 
 <p>
-<picture>
-<source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=el-pablos&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&bg_color=0d1117&title_color=a78bfa&icon_color=8b5cf6&text_color=c9d1d9&ring_color=7c3aed&cache_seconds=21600" />
-<source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api?username=el-pablos&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&title_color=7c3aed&icon_color=8b5cf6&ring_color=7c3aed&cache_seconds=21600" />
-<img width="49%" src="https://github-readme-stats.vercel.app/api?username=el-pablos&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&bg_color=0d1117&title_color=a78bfa&icon_color=8b5cf6&text_color=c9d1d9&ring_color=7c3aed&cache_seconds=21600" alt="GitHub Stats" />
-</picture>
+<img width="49%" src="https://raw.githubusercontent.com/el-pablos/el-pablos/profile-summary/profile-summary-card-output/0-profile-details.svg" alt="Profile Details" />
 <picture>
 <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=el-pablos&hide_border=true&background=0d1117&ring=7c3aed&fire=a78bfa&currStreakLabel=8b5cf6&sideLabels=a78bfa&currStreakNum=c9d1d9&sideNums=c9d1d9&dates=6b7280" />
 <source media="(prefers-color-scheme: light)" srcset="https://streak-stats.demolab.com?user=el-pablos&hide_border=true&ring=7c3aed&fire=8b5cf6&currStreakLabel=7c3aed" />
@@ -254,11 +268,13 @@ const tama = {
 </p>
 
 <p>
-<picture>
-<source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=el-pablos&layout=compact&langs_count=10&hide_border=true&bg_color=0d1117&title_color=a78bfa&text_color=c9d1d9&cache_seconds=21600" />
-<source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=el-pablos&layout=compact&langs_count=10&hide_border=true&title_color=7c3aed&cache_seconds=21600" />
-<img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=el-pablos&layout=compact&langs_count=10&hide_border=true&bg_color=0d1117&title_color=a78bfa&text_color=c9d1d9&cache_seconds=21600" alt="Top Languages" />
-</picture>
+<img width="32%" src="https://raw.githubusercontent.com/el-pablos/el-pablos/profile-summary/profile-summary-card-output/1-repos-per-language.svg" alt="Repos per Language" />
+<img width="32%" src="https://raw.githubusercontent.com/el-pablos/el-pablos/profile-summary/profile-summary-card-output/2-most-commit-language.svg" alt="Most Commit Language" />
+<img width="32%" src="https://raw.githubusercontent.com/el-pablos/el-pablos/profile-summary/profile-summary-card-output/3-stats.svg" alt="Stats" />
+</p>
+
+<p>
+<img width="49%" src="https://raw.githubusercontent.com/el-pablos/el-pablos/profile-summary/profile-summary-card-output/4-productive-time.svg" alt="Productive Time" />
 <picture>
 <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=el-pablos&hide_border=true&bg_color=0d1117&color=a78bfa&line=7c3aed&point=c9d1d9&area=true&area_color=8b5cf6" />
 <source media="(prefers-color-scheme: light)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=el-pablos&hide_border=true&color=7c3aed&line=7c3aed&point=374151&area=true&area_color=8b5cf6" />
@@ -270,23 +286,7 @@ const tama = {
 
 <br>
 
-<!-- ═══════════════════════════════════════════════════════════════════════════════ -->
-<!-- TROPHIES -->
-<!-- ═══════════════════════════════════════════════════════════════════════════════ -->
 
-<div align="center">
-
-### 🏆 Trophies
-
-<picture>
-<source media="(prefers-color-scheme: dark)" srcset="https://github-profile-trophy.vercel.app/?username=el-pablos&theme=discord&no-frame=true&no-bg=true&column=7&margin-w=15&margin-h=15" />
-<source media="(prefers-color-scheme: light)" srcset="https://github-profile-trophy.vercel.app/?username=el-pablos&theme=flat&no-frame=true&no-bg=true&column=7&margin-w=15&margin-h=15" />
-<img src="https://github-profile-trophy.vercel.app/?username=el-pablos&theme=discord&no-frame=true&no-bg=true&column=7&margin-w=15&margin-h=15" alt="GitHub Trophies" />
-</picture>
-
-</div>
-
-<br>
 
 <!-- ═══════════════════════════════════════════════════════════════════════════════ -->
 <!-- WHAT I'M UP TO -->
@@ -327,7 +327,7 @@ const tama = {
 <br>
 
 <a href="https://porto.tams.codes" target="_blank"><img src="https://img.shields.io/badge/Portfolio-7c3aed?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Portfolio"/></a>
-<a href="mailto:yeteprem.end23juni@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
+<a href="mailto:me@tams.codes"><img src="https://img.shields.io/badge/Email-8a2be2?style=for-the-badge&logo=maildotru&logoColor=white" alt="Email"/></a>
 <a href="https://github.com/el-pablos" target="_blank"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/></a>
 <a href="https://linkedin.com/in/el-pablos" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
 <a href="https://t.me/ImTamaa" target="_blank"><img src="https://img.shields.io/badge/Telegram-26A5E4?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram"/></a>

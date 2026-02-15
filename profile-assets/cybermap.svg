@@ -1,0 +1,385 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 500" width="1000" height="500">
+  <defs>
+    <style>
+      @keyframes pulse {
+        0% { r: 3; opacity: 0.9; }
+        50% { r: 7; opacity: 0.4; }
+        100% { r: 3; opacity: 0.9; }
+      }
+      @keyframes pulse-ring {
+        0% { r: 4; opacity: 0.6; stroke-width: 2; }
+        100% { r: 22; opacity: 0; stroke-width: 0.5; }
+      }
+      @keyframes scan-line {
+        0% { transform: translateY(-250px); }
+        100% { transform: translateY(250px); }
+      }
+      @keyframes dash-flow {
+        0% { stroke-dashoffset: 20; }
+        100% { stroke-dashoffset: 0; }
+      }
+      @keyframes fade-pulse {
+        0%, 100% { opacity: 0.3; }
+        50% { opacity: 0.7; }
+      }
+      @keyframes threat-blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.3; }
+      }
+      @keyframes counter-tick {
+        0%, 90% { opacity: 1; }
+        95% { opacity: 0.2; }
+        100% { opacity: 1; }
+      }
+      .node { animation: pulse 2s ease-in-out infinite; }
+      .node-d1 { animation-delay: 0s; }
+      .node-d2 { animation-delay: 0.3s; }
+      .node-d3 { animation-delay: 0.6s; }
+      .node-d4 { animation-delay: 0.9s; }
+      .node-d5 { animation-delay: 1.2s; }
+      .node-d6 { animation-delay: 1.5s; }
+      .ring { fill: none; stroke: #a78bfa; animation: pulse-ring 2s ease-out infinite; }
+      .ring-d1 { animation-delay: 0.2s; }
+      .ring-d2 { animation-delay: 0.7s; }
+      .ring-d3 { animation-delay: 1.1s; }
+      .ring-d4 { animation-delay: 0.4s; }
+      .ring-d5 { animation-delay: 1.4s; }
+      .ring-d6 { animation-delay: 0.9s; }
+      .threat-line {
+        stroke: #7c3aed;
+        stroke-width: 1;
+        stroke-dasharray: 6 4;
+        fill: none;
+        opacity: 0.6;
+        animation: dash-flow 1s linear infinite;
+      }
+      .threat-line-alt {
+        stroke: #a78bfa;
+        stroke-width: 0.7;
+        stroke-dasharray: 4 6;
+        fill: none;
+        opacity: 0.4;
+        animation: dash-flow 1.5s linear infinite;
+      }
+      .grid-line {
+        stroke: #1e1b4b;
+        stroke-width: 0.3;
+        fill: none;
+      }
+      .continent {
+        fill: none;
+        stroke: #4c1d95;
+        stroke-width: 0.8;
+        opacity: 0.7;
+      }
+      .continent-fill {
+        fill: #1e1040;
+        stroke: none;
+        opacity: 0.5;
+      }
+      .scan {
+        animation: scan-line 4s linear infinite;
+      }
+      .hud-text {
+        font-family: 'Courier New', monospace;
+        fill: #a78bfa;
+        font-size: 9px;
+        letter-spacing: 1px;
+      }
+      .hud-label {
+        font-family: 'Courier New', monospace;
+        fill: #6d28d9;
+        font-size: 7px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+      .hud-value {
+        font-family: 'Courier New', monospace;
+        fill: #c4b5fd;
+        font-size: 11px;
+        font-weight: bold;
+      }
+      .hud-title {
+        font-family: 'Courier New', monospace;
+        fill: #e9d5ff;
+        font-size: 10px;
+        letter-spacing: 3px;
+        font-weight: bold;
+      }
+      .status-dot {
+        animation: threat-blink 1.5s ease-in-out infinite;
+      }
+      .fade-pulse {
+        animation: fade-pulse 3s ease-in-out infinite;
+      }
+      .counter {
+        animation: counter-tick 3s steps(1) infinite;
+      }
+    </style>
+
+    <radialGradient id="bg-grad" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#0f0520"/>
+      <stop offset="100%" stop-color="#050208"/>
+    </radialGradient>
+
+    <radialGradient id="node-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#a78bfa" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="scan-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7c3aed" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#7c3aed" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/>
+    </linearGradient>
+
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="soft-glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="500" fill="url(#bg-grad)"/>
+
+  <!-- Grid -->
+  <g class="fade-pulse">
+    <line x1="0" y1="125" x2="1000" y2="125" class="grid-line"/>
+    <line x1="0" y1="250" x2="1000" y2="250" class="grid-line"/>
+    <line x1="0" y1="375" x2="1000" y2="375" class="grid-line"/>
+    <line x1="250" y1="0" x2="250" y2="500" class="grid-line"/>
+    <line x1="500" y1="0" x2="500" y2="500" class="grid-line"/>
+    <line x1="750" y1="0" x2="750" y2="500" class="grid-line"/>
+    <!-- Subtle sub-grid -->
+    <line x1="0" y1="62" x2="1000" y2="62" class="grid-line" opacity="0.4"/>
+    <line x1="0" y1="187" x2="1000" y2="187" class="grid-line" opacity="0.4"/>
+    <line x1="0" y1="312" x2="1000" y2="312" class="grid-line" opacity="0.4"/>
+    <line x1="0" y1="437" x2="1000" y2="437" class="grid-line" opacity="0.4"/>
+    <line x1="125" y1="0" x2="125" y2="500" class="grid-line" opacity="0.4"/>
+    <line x1="375" y1="0" x2="375" y2="500" class="grid-line" opacity="0.4"/>
+    <line x1="625" y1="0" x2="625" y2="500" class="grid-line" opacity="0.4"/>
+    <line x1="875" y1="0" x2="875" y2="500" class="grid-line" opacity="0.4"/>
+  </g>
+
+  <!-- Scan line -->
+  <g class="scan">
+    <rect x="0" y="200" width="1000" height="100" fill="url(#scan-grad)"/>
+  </g>
+
+  <!-- Simplified World Map Continents -->
+  <g>
+    <!-- North America -->
+    <path class="continent-fill" d="M120,100 L180,80 L230,85 L260,100 L270,120 L280,140 L270,160 L250,180 L220,200 L200,220 L180,210 L160,240 L140,230 L120,200 L100,180 L90,150 L95,120 Z"/>
+    <path class="continent" d="M120,100 L180,80 L230,85 L260,100 L270,120 L280,140 L270,160 L250,180 L220,200 L200,220 L180,210 L160,240 L140,230 L120,200 L100,180 L90,150 L95,120 Z"/>
+
+    <!-- South America -->
+    <path class="continent-fill" d="M220,260 L250,250 L280,260 L300,280 L310,310 L305,340 L290,370 L270,390 L250,400 L240,380 L230,350 L220,320 L210,290 Z"/>
+    <path class="continent" d="M220,260 L250,250 L280,260 L300,280 L310,310 L305,340 L290,370 L270,390 L250,400 L240,380 L230,350 L220,320 L210,290 Z"/>
+
+    <!-- Europe -->
+    <path class="continent-fill" d="M430,90 L460,80 L500,85 L520,90 L530,100 L540,110 L530,130 L510,140 L490,135 L470,140 L450,135 L440,120 L430,110 Z"/>
+    <path class="continent" d="M430,90 L460,80 L500,85 L520,90 L530,100 L540,110 L530,130 L510,140 L490,135 L470,140 L450,135 L440,120 L430,110 Z"/>
+
+    <!-- Africa -->
+    <path class="continent-fill" d="M440,160 L470,150 L510,155 L530,170 L540,200 L545,230 L540,270 L530,300 L510,330 L490,345 L470,340 L455,320 L445,290 L440,260 L435,230 L430,200 Z"/>
+    <path class="continent" d="M440,160 L470,150 L510,155 L530,170 L540,200 L545,230 L540,270 L530,300 L510,330 L490,345 L470,340 L455,320 L445,290 L440,260 L435,230 L430,200 Z"/>
+
+    <!-- Asia -->
+    <path class="continent-fill" d="M550,70 L600,60 L660,65 L720,70 L770,80 L800,95 L810,110 L800,130 L780,145 L750,155 L720,160 L690,165 L660,170 L630,165 L600,155 L580,145 L560,130 L550,110 L545,90 Z"/>
+    <path class="continent" d="M550,70 L600,60 L660,65 L720,70 L770,80 L800,95 L810,110 L800,130 L780,145 L750,155 L720,160 L690,165 L660,170 L630,165 L600,155 L580,145 L560,130 L550,110 L545,90 Z"/>
+
+    <!-- Southeast Asia / Indonesia -->
+    <path class="continent-fill" d="M700,200 L730,195 L760,200 L780,210 L790,225 L770,235 L740,230 L720,240 L700,235 L690,220 Z"/>
+    <path class="continent" d="M700,200 L730,195 L760,200 L780,210 L790,225 L770,235 L740,230 L720,240 L700,235 L690,220 Z"/>
+
+    <!-- Australia -->
+    <path class="continent-fill" d="M780,310 L820,295 L860,300 L880,315 L885,340 L870,365 L845,375 L815,370 L790,355 L780,335 Z"/>
+    <path class="continent" d="M780,310 L820,295 L860,300 L880,315 L885,340 L870,365 L845,375 L815,370 L790,355 L780,335 Z"/>
+  </g>
+
+  <!-- Threat Connection Lines -->
+  <g>
+    <!-- Jakarta to Tokyo -->
+    <path class="threat-line" d="M730,220 Q760,170 780,110"/>
+    <!-- Jakarta to London -->
+    <path class="threat-line" d="M730,220 Q580,160 480,105"/>
+    <!-- Jakarta to New York -->
+    <path class="threat-line-alt" d="M730,220 Q500,200 220,140"/>
+    <!-- Moscow to Jakarta -->
+    <path class="threat-line" d="M580,90 Q650,150 730,220"/>
+    <!-- São Paulo to London -->
+    <path class="threat-line-alt" d="M270,340 Q380,200 480,105"/>
+    <!-- Singapore to Sydney -->
+    <path class="threat-line-alt" d="M740,215 Q780,270 830,320"/>
+    <!-- New York to London -->
+    <path class="threat-line" d="M220,140 Q350,80 480,105"/>
+    <!-- Beijing to Moscow -->
+    <path class="threat-line-alt" d="M720,100 Q650,80 580,90"/>
+    <!-- Tokyo to SF -->
+    <path class="threat-line" d="M780,110 Q600,90 180,130"/>
+    <!-- Mumbai to Dubai -->
+    <path class="threat-line-alt" d="M660,175 Q600,160 560,155"/>
+  </g>
+
+  <!-- City Nodes with Pulse Rings -->
+  <g filter="url(#glow)">
+    <!-- Jakarta (HOME - bigger) -->
+    <circle cx="730" cy="220" r="16" fill="url(#node-glow)" opacity="0.4"/>
+    <circle cx="730" cy="220" class="ring ring-d1" r="4"/>
+    <circle cx="730" cy="220" class="ring ring-d3" r="4" style="animation-delay: 1s"/>
+    <circle cx="730" cy="220" class="node node-d1" r="4" fill="#a78bfa"/>
+
+    <!-- New York -->
+    <circle cx="220" cy="140" r="10" fill="url(#node-glow)" opacity="0.3"/>
+    <circle cx="220" cy="140" class="ring ring-d2" r="3"/>
+    <circle cx="220" cy="140" class="node node-d2" r="3" fill="#8b5cf6"/>
+
+    <!-- London -->
+    <circle cx="480" cy="105" r="10" fill="url(#node-glow)" opacity="0.3"/>
+    <circle cx="480" cy="105" class="ring ring-d3" r="3"/>
+    <circle cx="480" cy="105" class="node node-d3" r="3" fill="#8b5cf6"/>
+
+    <!-- Moscow -->
+    <circle cx="580" cy="90" r="8" fill="url(#node-glow)" opacity="0.25"/>
+    <circle cx="580" cy="90" class="ring ring-d4" r="3"/>
+    <circle cx="580" cy="90" class="node node-d4" r="2.5" fill="#7c3aed"/>
+
+    <!-- Tokyo -->
+    <circle cx="780" cy="110" r="10" fill="url(#node-glow)" opacity="0.3"/>
+    <circle cx="780" cy="110" class="ring ring-d5" r="3"/>
+    <circle cx="780" cy="110" class="node node-d5" r="3" fill="#8b5cf6"/>
+
+    <!-- São Paulo -->
+    <circle cx="270" cy="340" r="8" fill="url(#node-glow)" opacity="0.25"/>
+    <circle cx="270" cy="340" class="ring ring-d6" r="3"/>
+    <circle cx="270" cy="340" class="node node-d6" r="2.5" fill="#7c3aed"/>
+
+    <!-- Sydney -->
+    <circle cx="830" cy="320" r="8" fill="url(#node-glow)" opacity="0.25"/>
+    <circle cx="830" cy="320" class="ring ring-d1" r="3"/>
+    <circle cx="830" cy="320" class="node node-d3" r="2.5" fill="#7c3aed"/>
+
+    <!-- San Francisco -->
+    <circle cx="145" cy="135" r="8" fill="url(#node-glow)" opacity="0.25"/>
+    <circle cx="145" cy="135" class="ring ring-d4" r="3"/>
+    <circle cx="145" cy="135" class="node node-d5" r="2.5" fill="#7c3aed"/>
+
+    <!-- Dubai -->
+    <circle cx="560" cy="155" r="8" fill="url(#node-glow)" opacity="0.25"/>
+    <circle cx="560" cy="155" class="ring ring-d2" r="3"/>
+    <circle cx="560" cy="155" class="node node-d1" r="2.5" fill="#7c3aed"/>
+
+    <!-- Mumbai -->
+    <circle cx="660" cy="175" r="8" fill="url(#node-glow)" opacity="0.25"/>
+    <circle cx="660" cy="175" class="ring ring-d5" r="3"/>
+    <circle cx="660" cy="175" class="node node-d2" r="2.5" fill="#7c3aed"/>
+
+    <!-- Singapore -->
+    <circle cx="740" cy="215" r="6" fill="url(#node-glow)" opacity="0.2"/>
+    <circle cx="740" cy="215" class="node node-d4" r="2" fill="#6d28d9"/>
+
+    <!-- Seoul -->
+    <circle cx="760" cy="105" r="6" fill="url(#node-glow)" opacity="0.2"/>
+    <circle cx="760" cy="105" class="node node-d6" r="2" fill="#6d28d9"/>
+
+    <!-- Berlin -->
+    <circle cx="500" cy="95" r="6" fill="url(#node-glow)" opacity="0.2"/>
+    <circle cx="500" cy="95" class="node node-d3" r="2" fill="#6d28d9"/>
+
+    <!-- Beijing -->
+    <circle cx="720" cy="100" r="6" fill="url(#node-glow)" opacity="0.2"/>
+    <circle cx="720" cy="100" class="node node-d1" r="2" fill="#6d28d9"/>
+  </g>
+
+  <!-- HUD Frame -->
+  <g>
+    <!-- Top-left corner -->
+    <line x1="15" y1="15" x2="55" y2="15" stroke="#4c1d95" stroke-width="1"/>
+    <line x1="15" y1="15" x2="15" y2="55" stroke="#4c1d95" stroke-width="1"/>
+    <!-- Top-right corner -->
+    <line x1="945" y1="15" x2="985" y2="15" stroke="#4c1d95" stroke-width="1"/>
+    <line x1="985" y1="15" x2="985" y2="55" stroke="#4c1d95" stroke-width="1"/>
+    <!-- Bottom-left corner -->
+    <line x1="15" y1="445" x2="15" y2="485" stroke="#4c1d95" stroke-width="1"/>
+    <line x1="15" y1="485" x2="55" y2="485" stroke="#4c1d95" stroke-width="1"/>
+    <!-- Bottom-right corner -->
+    <line x1="945" y1="485" x2="985" y2="485" stroke="#4c1d95" stroke-width="1"/>
+    <line x1="985" y1="445" x2="985" y2="485" stroke="#4c1d95" stroke-width="1"/>
+
+    <!-- Top bar -->
+    <rect x="60" y="12" width="880" height="1" fill="#1e1b4b" opacity="0.6"/>
+    <!-- Bottom bar -->
+    <rect x="60" y="487" width="880" height="1" fill="#1e1b4b" opacity="0.6"/>
+  </g>
+
+  <!-- HUD Title -->
+  <g>
+    <text x="500" y="38" text-anchor="middle" class="hud-title">GLOBAL THREAT INTELLIGENCE MONITOR</text>
+    <circle cx="365" cy="35" r="3" fill="#a78bfa" class="status-dot"/>
+    <text x="374" y="38" class="hud-label" fill="#6d28d9">LIVE</text>
+  </g>
+
+  <!-- HUD Left Panel -->
+  <g>
+    <rect x="25" y="65" width="120" height="90" rx="3" fill="#0a0315" stroke="#2e1065" stroke-width="0.5" opacity="0.85"/>
+    <text x="35" y="80" class="hud-label">THREATS TODAY</text>
+    <text x="35" y="98" class="hud-value" fill="#e9d5ff" font-size="18" class="counter">14,827</text>
+    <text x="35" y="115" class="hud-label">BLOCKED</text>
+    <text x="35" y="130" class="hud-value" fill="#34d399" font-size="13">12,491</text>
+    <text x="35" y="145" class="hud-label">ACTIVE NODES</text>
+    <text x="35" y="148" class="hud-value" fill="#a78bfa" font-size="10">● 14 ONLINE</text>
+  </g>
+
+  <!-- HUD Right Panel -->
+  <g>
+    <rect x="855" y="65" width="120" height="90" rx="3" fill="#0a0315" stroke="#2e1065" stroke-width="0.5" opacity="0.85"/>
+    <text x="865" y="80" class="hud-label">TOP VECTORS</text>
+    <text x="865" y="96" class="hud-text" font-size="8">▸ SQL Injection</text>
+    <text x="865" y="108" class="hud-text" font-size="8">▸ XSS Reflected</text>
+    <text x="865" y="120" class="hud-text" font-size="8">▸ Brute Force</text>
+    <text x="865" y="132" class="hud-text" font-size="8">▸ DDoS Layer 7</text>
+    <text x="865" y="144" class="hud-text" font-size="8">▸ Path Traversal</text>
+  </g>
+
+  <!-- Location Labels -->
+  <g>
+    <text x="730" y="242" text-anchor="middle" class="hud-text" fill="#e9d5ff" font-size="8" font-weight="bold">JAKARTA ●</text>
+    <text x="220" y="158" text-anchor="middle" class="hud-label" font-size="6">NEW YORK</text>
+    <text x="480" y="97" text-anchor="middle" class="hud-label" font-size="6">LONDON</text>
+    <text x="780" y="125" text-anchor="middle" class="hud-label" font-size="6">TOKYO</text>
+    <text x="580" y="83" text-anchor="middle" class="hud-label" font-size="6">MOSCOW</text>
+    <text x="830" y="340" text-anchor="middle" class="hud-label" font-size="6">SYDNEY</text>
+    <text x="660" y="190" text-anchor="middle" class="hud-label" font-size="6">MUMBAI</text>
+  </g>
+
+  <!-- Bottom HUD Status Bar -->
+  <g>
+    <rect x="25" y="455" width="950" height="26" rx="3" fill="#0a0315" stroke="#2e1065" stroke-width="0.5" opacity="0.75"/>
+    <circle cx="40" cy="468" r="3" fill="#34d399" class="status-dot"/>
+    <text x="50" y="471" class="hud-text" font-size="8">SYSTEM ONLINE</text>
+    <text x="170" y="471" class="hud-label" font-size="7">│</text>
+    <text x="185" y="471" class="hud-text" font-size="8">UPTIME 99.97%</text>
+    <text x="300" y="471" class="hud-label" font-size="7">│</text>
+    <text x="315" y="471" class="hud-text" font-size="8">LATENCY 12ms</text>
+    <text x="430" y="471" class="hud-label" font-size="7">│</text>
+    <text x="445" y="471" class="hud-text" font-size="8">FIREWALL: ACTIVE</text>
+    <text x="580" y="471" class="hud-label" font-size="7">│</text>
+    <text x="595" y="471" class="hud-text" font-size="8">IDS/IPS: MONITORING</text>
+    <text x="750" y="471" class="hud-label" font-size="7">│</text>
+    <text x="765" y="471" class="hud-text" font-size="8">@el-pablos // tams.codes</text>
+  </g>
+
+  <!-- Vignette overlay -->
+  <rect width="1000" height="500" fill="url(#bg-grad)" opacity="0.15" pointer-events="none"/>
+</svg>
