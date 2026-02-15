@@ -22,5 +22,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           USERNAME: el-pablos
-          BRANCH_NAME: profile-summary
+          BRANCH_NAME: main
           UTC_OFFSET: 7

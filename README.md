@@ -259,7 +259,7 @@ const tama = {
 ### 📊 GitHub Analytics
 
 <p>
-<img width="49%" src="https://raw.githubusercontent.com/el-pablos/el-pablos/profile-summary/profile-summary-card-output/0-profile-details.svg" alt="Profile Details" />
+<img width="49%" src="https://raw.githubusercontent.com/el-pablos/el-pablos/main/profile-summary-card-output/tokyonight/0-profile-details.svg" alt="Profile Details" />
 <picture>
 <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=el-pablos&hide_border=true&background=0d1117&ring=7c3aed&fire=a78bfa&currStreakLabel=8b5cf6&sideLabels=a78bfa&currStreakNum=c9d1d9&sideNums=c9d1d9&dates=6b7280" />
 <source media="(prefers-color-scheme: light)" srcset="https://streak-stats.demolab.com?user=el-pablos&hide_border=true&ring=7c3aed&fire=8b5cf6&currStreakLabel=7c3aed" />
@@ -268,13 +268,13 @@ const tama = {
 </p>
 
 <p>
-<img width="32%" src="https://raw.githubusercontent.com/el-pablos/el-pablos/profile-summary/profile-summary-card-output/1-repos-per-language.svg" alt="Repos per Language" />
-<img width="32%" src="https://raw.githubusercontent.com/el-pablos/el-pablos/profile-summary/profile-summary-card-output/2-most-commit-language.svg" alt="Most Commit Language" />
-<img width="32%" src="https://raw.githubusercontent.com/el-pablos/el-pablos/profile-summary/profile-summary-card-output/3-stats.svg" alt="Stats" />
+<img width="32%" src="https://raw.githubusercontent.com/el-pablos/el-pablos/main/profile-summary-card-output/tokyonight/1-repos-per-language.svg" alt="Repos per Language" />
+<img width="32%" src="https://raw.githubusercontent.com/el-pablos/el-pablos/main/profile-summary-card-output/tokyonight/2-most-commit-language.svg" alt="Most Commit Language" />
+<img width="32%" src="https://raw.githubusercontent.com/el-pablos/el-pablos/main/profile-summary-card-output/tokyonight/3-stats.svg" alt="Stats" />
 </p>
 
 <p>
-<img width="49%" src="https://raw.githubusercontent.com/el-pablos/el-pablos/profile-summary/profile-summary-card-output/4-productive-time.svg" alt="Productive Time" />
+<img width="49%" src="https://raw.githubusercontent.com/el-pablos/el-pablos/main/profile-summary-card-output/tokyonight/4-productive-time.svg" alt="Productive Time" />
 <picture>
 <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=el-pablos&hide_border=true&bg_color=0d1117&color=a78bfa&line=7c3aed&point=c9d1d9&area=true&area_color=8b5cf6" />
 <source media="(prefers-color-scheme: light)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=el-pablos&hide_border=true&color=7c3aed&line=7c3aed&point=374151&area=true&area_color=8b5cf6" />
